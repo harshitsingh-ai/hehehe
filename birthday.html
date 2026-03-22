@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday kiran ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff7cc, #ffe680);
+    overflow-x: hidden;
+    text-align: center;
+    color: #5a4a00;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    animation: floatUp 6s linear infinite;
+    font-size: 20px;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.container {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.photo img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+p {
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white;
+    color: #ff4e50;
+}
+
+button:hover {
+    background-color: #ff4e50;
+    color: white;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 30px;
+    font-size: 1.3em;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday kiran ❤️</h1>
+
+    <!-- PHOTO SECTION -->
+    <div class="photo">
+        <img src="kirancollage.jpg" alt="Birthday Girl">
+    </div>
+
+    <!-- MAIN MESSAGE -->
+    <p>
+        Happiest birthday to my little cutie patootie🧿
+    </p>
+
+    <button onclick="showMessage()">Click for Surprise(letter hi milega abhi toh) 🎁</button>
+
+    <!-- SURPRISE MESSAGE -->
+    <div class="hidden-message" id="surprise">
+        Happy B’day meri Rasmalai ❤️
+Hamesha khush rehna… tu jab smile karti hai na, sab kuch perfect lagta hai.
+Aaj ka din apne family ke saath full enjoy karna.
+
+Aur ek chhoti si wish hai…
+kabhi mujhe bhi mauka mile tujhe special feel karane ka.🧿 ❤️
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("surprise").style.display = "block";
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.filter = "drop-shadow(0 0 5px yellow)";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
